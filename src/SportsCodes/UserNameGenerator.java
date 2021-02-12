@@ -1,3 +1,5 @@
+package SportsCodes;
+
 public class UserNameGenerator {
     public static void main(String[] args) {
 

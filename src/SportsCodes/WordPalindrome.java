@@ -1,3 +1,5 @@
+package SportsCodes;
+
 public class WordPalindrome {
     public static void main(String[] args) {
         WordPalindrome i = new WordPalindrome();

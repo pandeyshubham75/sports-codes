@@ -1,3 +1,5 @@
+package SportsCodes;
+
 public class StringDecode {
     public static void main(String[] args) {
         System.out.println(decodeString("abc2[a]"));

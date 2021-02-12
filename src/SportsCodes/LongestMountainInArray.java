@@ -1,3 +1,5 @@
+package SportsCodes;
+
 public class LongestMountainInArray {
     public static void main(String[] args) {
         System.out.println(longestMountain(new int[]{0,0,1,0,0,1,1,1,1,1}));

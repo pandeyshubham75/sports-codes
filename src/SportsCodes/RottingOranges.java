@@ -1,3 +1,5 @@
+package SportsCodes;
+
 public class RottingOranges {
     public static void main(String[] args) {
         RottingOranges i = new RottingOranges();

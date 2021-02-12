@@ -1,3 +1,5 @@
+package SportsCodes;
+
 public class UniqueMorseCodeWords {
     public static void main(String[] args) {
         System.out.println(uniqueMorseRepresentations(new String[]{"gin", "zen", "gig", "msg"}));

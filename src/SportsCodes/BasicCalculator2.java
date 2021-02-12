@@ -1,3 +1,5 @@
+package SportsCodes;
+
 public class BasicCalculator2 {
 
     public static void main(String[] args) {

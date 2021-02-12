@@ -1,3 +1,5 @@
+package SportsCodes;
+
 public class DayFromDate {
 
     public static void main(String[] args) {

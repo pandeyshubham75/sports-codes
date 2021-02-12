@@ -1,3 +1,5 @@
+package SportsCodes;
+
 public class StockProfitWithCooldown {
     public static void main(String[] args) {
         StockProfitWithCooldown instance = new StockProfitWithCooldown();

@@ -1,3 +1,5 @@
+package SportsCodes;
+
 public class MatrixSearch {
     public static void main(String[] args) {
         MatrixSearch m = new MatrixSearch();
