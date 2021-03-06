@@ -137,11 +137,6 @@ class TrieNodeAlt {
         this.word = word;
         this.children = new HashMap<>();
     }
-    TrieNodeAlt(Character character, boolean word, Map<Character, TrieNodeAlt> children) {
-        this.character = character;
-        this.word = word;
-        this.children = children;
-    }
 }
 
 class TrieNodeServiceAlt {
