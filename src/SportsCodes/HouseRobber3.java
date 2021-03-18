@@ -5,20 +5,29 @@ import java.util.Queue;
 
 public class HouseRobber3 {
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(
-                4,
-                new TreeNode(
-                        1,
-                        new TreeNode(
-                                2,
-                                new TreeNode(3),
-                                null
-                        ),
-                        null
-                ),
-                null
-        );
-        System.out.println(rob(root));
+//        TreeNode root = new TreeNode(
+//                4,
+//                new TreeNode(
+//                        1,
+//                        new TreeNode(
+//                                2,
+//                                new TreeNode(3),
+//                                null
+//                        ),
+//                        null
+//                ),
+//                null
+//        );
+//        System.out.println(rob(root));
+
+        TreeNode root = new TreeNode(2);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(3);
+        root.left.right = new TreeNode(4);
+
+        System.out.println(rob2(root));
+
+
     }
 
     public static int rob(TreeNode root) {
@@ -69,5 +78,35 @@ public class HouseRobber3 {
         nextTwoMaxes[0] = nextMax;
         return nextTwoMaxes;
     }
+
+
+    public static int rob2(TreeNode root) {
+        int[] sol = new int[2];
+        dfs(root, sol);
+        return Math.max(sol[0],sol[1]);
+    }
+
+    public static void dfs(TreeNode root, int[] sol){
+        int left[] = new int[2];
+        int right[] = new int[2];
+        if (root.left == null && root.right == null) {
+            sol[0] = root.val;
+            return;
+        }
+        if (root.left != null){
+            dfs(root.left, left);
+        }
+        if (root.right != null){
+            dfs(root.right, right);
+        }
+        sol[0] = root.val + (left == null ? 0 : left[1]) + (right == null ? 0 : right[1]);
+        if (left[0]+right[0] > sol[1]) sol[1] = left[0]+right[0]; //both left and right children included
+        if (left[0]+right[1] > sol[1]) sol[1] = left[0]+right[1]; //left included, right excluded
+        if (left[1]+right[0] > sol[1]) sol[1] = left[1]+right[0]; //left excluded right included
+        if (left[1]+right[1] > sol[1]) sol[1] = left[1]+right[1]; //both included
+//        System.out.println("For Node: "+root.val+" max Including is: "+ sol[0]+" and max Excluding is: "+sol[1]);
+    }
+
+
 
 }
